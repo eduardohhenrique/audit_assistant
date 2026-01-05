@@ -1,6 +1,7 @@
 from loaders.pdf_loader import PDFLoader
 from loaders.excel_loader import ExcelLoader
 from loaders.txt_loader import TXTLoader
+from preprocess.text_preprocess import TextPreprocessor
 
 
 def main():
@@ -12,6 +13,12 @@ def main():
   text = loader.load()
 
   print('-=-=Texto Extraído=-=-')
+  print(text[:1000])
+  
+  preprocessor = TextPreprocessor()
+  text = preprocessor.clean(text)
+  
+  print('-=-=Texto Preprocessado=-=-')
   print(text[:1000])
 
 if __name__ == '__main__':
