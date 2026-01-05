@@ -5,4 +5,3 @@ class DocumentReader(ABC):
   def load(self) -> str:
     pass
   
-  

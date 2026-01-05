@@ -11,3 +11,4 @@ class ExcelLoader(DocumentReader):
     df = df.fillna('')
     
     return df.astype(str).fillna('').to_string(index = False, header = False)
+  

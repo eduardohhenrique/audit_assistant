@@ -16,3 +16,4 @@ class PDFLoader(DocumentReader):
           text += page_text + '\n'
           
     return text
+  
